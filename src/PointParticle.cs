@@ -42,6 +42,6 @@ public class PointParticle{
 		Forces = new Vector2[0];
 	}
 	public void Draw(SpriteBatch spriteBatch){
-		new GameBuilder.Shapes.Point(Position, 10, Color.White).Draw(spriteBatch);
+		new GameBuilder.Shapes.Point(Position, (int)(10*System.Math.Sqrt(Mass)), Color.White).Draw(spriteBatch);
 	}
 }
