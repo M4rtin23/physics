@@ -20,7 +20,7 @@ public class FallingPointParticles:Screen{
 		length2 = (p1.Position-p0.Position).Length();
 		length3 = (p1.Position-p2.Position).Length();
 
-		Main = p1;
+		Particles = new PointParticle[]{p0,p1,p2};
 	}
 
 	public override void Update(){

@@ -6,7 +6,7 @@ public class Gravity : Screen{
 	private Vector2 Star = new Vector2(400,240);
 
 	public Gravity(){
-		Main = Planet;
+		Particles = new PointParticle[]{Planet};
 	}
 
     public override void Update(){

@@ -7,7 +7,7 @@ public class Spring : Screen{
 	static int length = 40;
 
 	public Spring(){
-		Main = particle;
+		Particles = new PointParticle[]{particle};
 	}
 
     public override void Update(){

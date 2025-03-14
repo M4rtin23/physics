@@ -8,7 +8,7 @@ public class Pendulum:Screen{
 	float length = 200;
 	public Pendulum(){
 		length = (Base-pendulum.Position).Length();
-		Main = pendulum;
+		Particles = new PointParticle[]{pendulum};
 	}
 
 	public override void Update(){

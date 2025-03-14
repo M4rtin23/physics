@@ -31,8 +31,10 @@ public class Game1 : Game{
 		spriteBatch.Begin();
 
 		screen.Draw(spriteBatch);
-		new GameBuilder.Shapes.Line(screen.Main.Position, screen.Main.Position+screen.Main.Acceleration*400, 2, Color.Red).Draw(spriteBatch);
-		new GameBuilder.Shapes.Line(screen.Main.Position, screen.Main.Position+screen.Main.Velocity*10, 2, Color.Blue).Draw(spriteBatch);
+        for(int i = 0; i < screen.Particles.Length; i++){
+            new GameBuilder.Shapes.Line(screen.Particles[i].Position, screen.Particles[i].Position+screen.Particles[i].Acceleration*400, 2, Color.Red).Draw(spriteBatch);
+            new GameBuilder.Shapes.Line(screen.Particles[i].Position, screen.Particles[i].Position+screen.Particles[i].Velocity*10, 2, Color.Blue).Draw(spriteBatch);
+        }
 
 
 		spriteBatch.End();

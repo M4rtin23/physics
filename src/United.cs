@@ -7,7 +7,7 @@ public class United:Screen{
 	float length = 80;
 
 	public United(){
-		Main = p1;
+		Particles = new PointParticle[]{p0,p1};
 		p1.Mass = 5;
 	}
 

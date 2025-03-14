@@ -13,7 +13,7 @@ public class DoublePendulum:Screen{
 	public DoublePendulum(){
 		length = (Base-p0.Position).Length();
 		length2 = (p1.Position-p0.Position).Length();
-		Main = p1;
+		Particles = new PointParticle[]{p0,p1};
 	}
 
 	public override void Update(){
