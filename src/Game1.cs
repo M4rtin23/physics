@@ -8,7 +8,7 @@ public class Game1 : Game{
     GraphicsDeviceManager graphics;
     SpriteBatch spriteBatch;
 
-	Screen screen = new Pendulum();
+	Scene Scene = new PendulumScene();
     public Game1(){
         graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
@@ -23,17 +23,17 @@ public class Game1 : Game{
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Q))
             Exit();
         base.Update(gameTime);
-		screen.Update();
+		Scene.Update();
     }
 
     protected override void Draw(GameTime gameTime){
         GraphicsDevice.Clear(Color.CornflowerBlue);
 		spriteBatch.Begin();
 
-		screen.Draw(spriteBatch);
-        for(int i = 0; i < screen.Particles.Length; i++){
-            new GameBuilder.Shapes.Line(screen.Particles[i].Position, screen.Particles[i].Position+screen.Particles[i].Acceleration*400, 2, Color.Red).Draw(spriteBatch);
-            new GameBuilder.Shapes.Line(screen.Particles[i].Position, screen.Particles[i].Position+screen.Particles[i].Velocity*10, 2, Color.Blue).Draw(spriteBatch);
+		Scene.Draw(spriteBatch);
+        for(int i = 0; i < Scene.Particles.Length; i++){
+            new GameBuilder.Shapes.Line(Scene.Particles[i].Position, Scene.Particles[i].Position+Scene.Particles[i].Acceleration*400, 2, Color.Red).Draw(spriteBatch);
+            new GameBuilder.Shapes.Line(Scene.Particles[i].Position, Scene.Particles[i].Position+Scene.Particles[i].Velocity*10, 2, Color.Blue).Draw(spriteBatch);
         }
 
 

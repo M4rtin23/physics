@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class United:Screen{
+public class ConnectedByStringScene:Scene{
 	PointParticle p0 = new PointParticle(new Vector2(350,225), Vector2.UnitX);
 	PointParticle p1 = new PointParticle(new Vector2(300,200));
 	float length = 80;
 
-	public United(){
+	public ConnectedByStringScene(){
 		Particles = new PointParticle[]{p0,p1};
 		p1.Mass = 5;
 	}

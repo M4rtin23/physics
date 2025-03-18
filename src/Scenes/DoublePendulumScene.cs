@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class DoublePendulum:Screen{
+public class DoublePendulumScene:Scene{
 	Vector2 Base = new Vector2(400,0);
 	Vector2 Gravity = new Vector2(0,0.1f);
 
@@ -10,7 +10,7 @@ public class DoublePendulum:Screen{
 
 	float length = 200;
 	float length2 = 100;
-	public DoublePendulum(){
+	public DoublePendulumScene(){
 		length = (Base-p0.Position).Length();
 		length2 = (p1.Position-p0.Position).Length();
 		Particles = new PointParticle[]{p0,p1};

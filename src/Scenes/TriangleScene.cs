@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class FallingPointParticles:Screen{
+public class TriangleScene:Scene{
 	Vector2 Gravity = new Vector2(0,0.1f);
 	PointParticle p0 = new PointParticle(new Vector2(350,200));
 	PointParticle p1 = new PointParticle(new Vector2(450,100));
@@ -10,7 +10,7 @@ public class FallingPointParticles:Screen{
 	float length = 200;
 	float length2 = 100;
 	float length3 = 100;
-	public FallingPointParticles(){
+	public TriangleScene(){
 		GameBuilder.Shapes.Triangle triangle = new GameBuilder.Shapes.Triangle(System.Math.PI, 51, System.Math.PI/2, 50, 0, 50)+ new Vector2(400,200);
 		p0.Position = triangle.Vertices[0];
 		p1.Position = triangle.Vertices[1];

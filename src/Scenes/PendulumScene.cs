@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class Pendulum:Screen{
+public class PendulumScene:Scene{
 	Vector2 Base = new Vector2(400,200);
 	PointParticle pendulum = new PointParticle(new Vector2(200,200), Vector2.UnitY*7);
 	Vector2 Gravity = new Vector2(0,0.1f);
 	float length = 200;
-	public Pendulum(){
+	public PendulumScene(){
 		length = (Base-pendulum.Position).Length();
 		Particles = new PointParticle[]{pendulum};
 	}

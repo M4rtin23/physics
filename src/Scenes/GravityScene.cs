@@ -1,11 +1,11 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class Gravity : Screen{
+public class GravityScene : Scene{
 	private PointParticle Planet = new PointParticle(new Vector2(200,300), new Vector2(0,2), new Vector2(0,1));
 	private Vector2 Star = new Vector2(400,240);
 
-	public Gravity(){
+	public GravityScene(){
 		Particles = new PointParticle[]{Planet};
 	}
 

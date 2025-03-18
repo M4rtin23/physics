@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class Spring : Screen{
+public class SpringScene : Scene{
 	PointParticle particle = new PointParticle(new Vector2(200, 480-5), Vector2.UnitX*2);
 	GameBuilder.Shapes.RectangleF spring = new GameBuilder.Shapes.RectangleF(640-length, 473, 240, 4);
 	static int length = 40;
 
-	public Spring(){
+	public SpringScene(){
 		Particles = new PointParticle[]{particle};
 	}
 
